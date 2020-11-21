@@ -34,3 +34,19 @@ h3 {
   background-color: #fff;
   margin: 32px 0;
 }
+
+.submit-button {
+  font-size: inherit;
+  font-family: inherit;
+  color: #fff;
+  background-color: #2e91fd;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: #257bd9;
+}

@@ -4,6 +4,9 @@ const del = require('del');
 const bs = require('browser-sync');
 const header = require('gulp-header');
 const babel = require('gulp-babel');
+const cleanCSS = require('gulp-clean-css');
+const rename = require('gulp-rename');
+const terser = require('gulp-terser');
 const pkg = require('./package.json');
 
 const server = bs.create();
@@ -59,6 +62,15 @@ const css = () => {
     .pipe(dest('build'));
 };
 
+const mincss = () => {
+  return src('src/tag-input.css')
+    .pipe(autoprefixer())
+    .pipe(cleanCSS())
+    .pipe(header(banner, { pkg: pkg }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest('build'));
+};
+
 const js = () => {
   return src('src/**/*.js')
     .pipe(
@@ -72,8 +84,23 @@ const js = () => {
     .pipe(dest('build'));
 };
 
+const minjs = () => {
+  return src('src/tag-input.js')
+    .pipe(
+      babel({
+        sourceType: 'script',
+        presets: ['@babel/env'],
+        retainLines: true,
+      })
+    )
+    .pipe(terser())
+    .pipe(header(banner, { pkg: pkg }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest('build'));
+};
+
 const clean = () => del('build');
-const build = series(clean, html, css, js);
+const build = series(clean, html, css, mincss, js, minjs);
 
 exports.clean = clean;
 exports.build = build;
