@@ -1,0 +1,36 @@
+
+/**
+ * @accessible-components/tag-input - Simple and accessible component for creating tags.
+ * @version v0.1.0
+ * @link https://github.com/accessible-components/tag-input
+ * @copyright 2020 Sergei Kriger, https://sergeikriger.com/
+ * @license MIT
+ */
+body {
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  padding-top: 30px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Raleway;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.container {
+  border-radius: 8px;
+  box-shadow: 0 2px 12px 1px rgba(0, 0, 0, 0.2);
+  padding: 32px 24px;
+  font-size: 18px;
+  line-height: 1.2;
+  background-color: #fff;
+  margin: 32px 0;
+}
