@@ -15,6 +15,7 @@
   "bugs": {
     "url": "https://github.com/accessible-components/tag-input/issues"
   },
+  "main": "./build/tag-input.js",
   "license": "MIT",
   "files": [
     "build/tag-input.*"
@@ -30,7 +31,6 @@
     "build": "gulp build",
     "serve:build": "gulp serveBuild",
     "clean": "gulp clean",
-    "preinstall": "npx npm-force-resolutions",
     "release": "standard-version"
   },
   "devDependencies": {
