@@ -1,7 +1,7 @@
 
 /**
  * @accessible-components/tag-input - Simple and accessible component for creating tags.
- * @version v0.1.0
+ * @version v0.1.1
  * @link https://github.com/accessible-components/tag-input
  * @copyright 2020 Sergei Kriger, https://sergeikriger.com/
  * @license MIT
@@ -40,6 +40,7 @@ function _typeof(obj) {"@babel/helpers - typeof";if (typeof Symbol === "function
     this.settings = {
       tags: [],
       prefix: 'tag-input',
+      disabled: false,
       name: 'tag-input',
       placeholder: 'Add tags',
       label: 'Tags',
@@ -186,6 +187,7 @@ function _typeof(obj) {"@babel/helpers - typeof";if (typeof Symbol === "function
     this.tagInput.insertBefore(tagEl, inputEl);
     this.tags.push(tag);
     setInputValue.call(this);
+    updateInputLabel.call(this);
 
     // Run callback
     if (!init && settings.onTagAdd) {
@@ -205,6 +207,8 @@ function _typeof(obj) {"@babel/helpers - typeof";if (typeof Symbol === "function
     if (tagEl) {
       tagEl.remove();
       this.tags = this.tags.filter(function (t) {return t !== tag;});
+      setInputValue.call(this);
+      updateInputLabel.call(this);
 
       if (this.settings.onTagRemove) {
         this.settings.onTagRemove(tag, this.tags);
@@ -311,7 +315,6 @@ function _typeof(obj) {"@babel/helpers - typeof";if (typeof Symbol === "function
     // *** Tags ***
     this.settings.tags.forEach(function (tag) {
       _this2.addTag(tag, true);
-      updateInputLabel.call(_this2);
     });
   }
 
@@ -392,7 +395,6 @@ function _typeof(obj) {"@babel/helpers - typeof";if (typeof Symbol === "function
       case key.ENTER:
         if (e.target.value) {
           this.addTag(e.target.value);
-          updateInputLabel.call(this);
           say.call(this, this.settings.ariaTagAdded.replace('{{TAG}}', e.target.value));
           this.inputEl.value = '';
         } else if (this._selected) {
@@ -403,7 +405,6 @@ function _typeof(obj) {"@babel/helpers - typeof";if (typeof Symbol === "function
       case key.TAB:
         if (e.target.value) {
           this.addTag(e.target.value);
-          updateInputLabel.call(this);
           say.call(this, this.settings.ariaTagAdded.replace('{{TAG}}', e.target.value));
           this.inputEl.value = '';
         }
@@ -413,14 +414,12 @@ function _typeof(obj) {"@babel/helpers - typeof";if (typeof Symbol === "function
         if (!this.value) {
           if (this._selected) {
             this.removeTag(this._selected);
-            updateInputLabel.call(this);
             say.call(this, this.settings.ariaTagDeleted.replace('{{TAG}}', this._selected));
             resetSelected.call(this);
           } else if (this.tags.length) {
             var last = this.tags[this.tags.length - 1];
 
             this.removeTag(last);
-            updateInputLabel.call(this);
             say.call(this, this.settings.ariaTagDeleted.replace('{{TAG}}', last));
             resetSelected.call(this);
           }
