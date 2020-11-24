@@ -17,23 +17,61 @@
       <div class="content">
         <h1>Tag Input</h1>
 
-        <div class="container">
+        <p>Simple and accessible component for creating tags.</p>
+
+        <div class="demo">
+          <h2>Simple</h2>
+          <p>Add, remove and edit tags.</p>
+          <div id="simple"></div>
+          <div class="results">You created <span class="count"></span> tags.</div>
+        </div>
+
+        <div class="demo">
+          <h2>Initial Tags</h2>
+          <p>Pass tags to the tag input on the page load.</p>
+          <div id="tags"></div>
+          <div class="results">You created <span class="count"></span> tags.</div>
+        </div>
+
+        <div class="demo">
+          <h2>Disabled</h2>
+          <p>Read only tags.</p>
+          <div id="disabled"></div>
+          <div class="results">You created <span class="count"></span> tags.</div>
+        </div>
+
+        <div class="demo">
+          <h2>Control from Outside</h2>
+          <p>Manage tags dynamically with JavaScript.</p>
+          <div id="control"></div>
+          <div class="results">You created <span class="count"></span> tags.</div>
+          <button class="button" data-tag="soft skills">add "soft skills"</button>
+          <button class="button" data-tag="personal development">add "personal development"</button>
+        </div>
+
+        <div class="demo custom">
+          <h2>Custom Styles</h2>
+          <p>Customize input's styles to mach your weblite design.</p>
+          <div id="styles"></div>
+          <div class="results">You created <span class="count"></span> tags.</div>
+        </div>
+
+        <div class="demo">
+          <h2>In the Form</h2>
+          <p>Place the input tag to the form and get tags on submit.</p>
           <form>
-            <div id="colors"></div>
-            <br />
-            <button class="submit-button">Submit</button>
+            <div id="form"></div>
+            <button class="button">Submit</button>
           </form>
-        </div>
-
-        <div class="container">
-          <div id="skills"></div>
-        </div>
-
-        <div class="container">
-          <div id="categories"></div>
         </div>
       </div>
     </main>
+
+    <footer>
+      Made by
+      <a href="https://sergeikriger.com/"> Sergei Kriger</a>. See code on
+      <a href="https://github.com/accessible-components/tag-input">GitHub</a>.
+    </footer>
 
     <script src="./tag-input.js"></script>
     <script src="./main.js"></script>

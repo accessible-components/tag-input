@@ -9,6 +9,7 @@ h1,
 h2,
 h3 {
   font-family: Raleway;
+  margin-top: 0;
 }
 
 .content {
@@ -17,17 +18,27 @@ h3 {
   padding: 0 18px;
 }
 
-.container {
+.demo {
   border-radius: 8px;
   box-shadow: 0 2px 12px 1px rgba(0, 0, 0, 0.2);
   padding: 32px 24px;
   font-size: 18px;
   line-height: 1.2;
   background-color: #fff;
-  margin: 32px 0;
+  margin: 40px 0;
 }
 
-.submit-button {
+.results {
+  margin-top: 24px;
+}
+
+.count {
+  background-color: #e5f1ff;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.button {
   font-size: inherit;
   font-family: inherit;
   color: #fff;
@@ -36,9 +47,101 @@ h3 {
   padding: 12px 16px;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 24px;
 }
 
-.submit-button:hover,
-.submit-button:focus {
-  background-color: #257bd9;
+.button:hover,
+.button:focus {
+  outline: none;
+  background-color: #2272ca;
+}
+
+footer {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.custom {
+  font-family: monospace;
+  background-color: #001ac5;
+  color: #fff;
+  border-radius: 0;
+}
+
+.custom .count {
+  background-color: #89fcfe;
+  color: #001ac5;
+  border-radius: 0;
+}
+
+.custom h2 {
+  font-family: monospace;
+}
+
+.custom .tag-input {
+  /* input */
+  --text: #fff;
+  --bg: #001AC5;
+  --bd: #89FCFE;
+  --bd-hover: #fff;
+  --bd-focus: #fff;
+  --bd-focus-light: transparent;
+
+  /* tag */
+  --tag-text: #001AC5;
+  --tag-bg: #89FCFE;
+  --tag-bd: #89FCFE;
+  --tag-remove-button: transparent;
+  --tag-remove-icon: #001AC5;
+
+  /* tag: hover */
+  --tag-hover-text: #001AC5;
+  --tag-hover-bg: #fff;
+  --tag-hover-bd: #fff;
+  --tag-hover-remove-button: transparent;
+  --tag-hover-remove-icon: #001AC5;
+  --tag-hover-remove-button-hover: #001AC5;
+  --tag-hover-remove-icon-hover: #fff;
+
+  /* tag: selected */
+  --tag-selected-text: #001AC5;
+  --tag-selected-bg: #fff;
+  --tag-selected-bd: #fff;
+  --tag-selected-remove-button: transparent;
+  --tag-selected-remove-icon: #001AC5;
+
+  /* tag: selected, hover */
+  --tag-selected-hover-text: #001AC5;
+  --tag-selected-hover-bg: #fff;
+  --tag-selected-hover-bd: #fff;
+  --tag-selected-hover-remove-button: transparent;
+  --tag-selected-hover-remove-icon: #001AC5;
+  --tag-selected-hover-remove-button-hover: #001AC5;
+  --tag-selected-hover-remove-icon-hover: #fff;
+
+  /* tag: editable */
+  --tag-editable-text: #fff;
+  --tag-editable-bg: #001AC5;
+  --tag-editable-bd: #fff;
+
+  border-top: none;
+  font-family: monospace;
+  border-radius: 0;
+  padding: 0;
+}
+
+.custom .tag-input__tag {
+  border-radius: 0;
+  margin: 6px;
+  margin-right: 0;
+  padding: 2px 8px;
+}
+
+.custom .tag-input__remove-button {
+  border-radius: 0;
+}
+
+.custom .tag-input__input {
+  font-family: monospace;
+  padding: 2px 8px;
 }
