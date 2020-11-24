@@ -131,15 +131,15 @@ To change colors you can simply update following CSS custom variables:
   --text: inherit;
   --bg: #fff;
   --bg-disabled: #f9f9f9;
-  --border: rgba(121, 121, 121, 0.23);
-  --border-hover: rgba(121, 121, 121, 0.4);
-  --border-focus: rgba(45, 146, 255, 0.7);
-  --border-focus-light: rgba(190, 221, 255, 0.5);
+  --bd: rgba(121, 121, 121, 0.23);
+  --bd-hover: rgba(121, 121, 121, 0.4);
+  --bd-focus: rgba(45, 146, 255, 0.7);
+  --bd-focus-light: rgba(190, 221, 255, 0.5);
 
   /* tag */
   --tag-text: #164172;
   --tag-bg: #e5f1ff;
-  --tag-border: #e5f1ff;
+  --tag-bd: #e5f1ff;
   --tag-remove-button: transparent;
   --tag-remove-icon: #2e91fd;
 
