@@ -13,6 +13,8 @@ Simple and accessible component for creating tags. Check out a [demo page](https
 * Fully accessible for keyboard and assistive technologies.
 * Cusomisable styles.
 
+![TagInput in action](./assets/demo-simple.gif)
+
 ## Browser support
 
 All modern browsers. _IE11_ is not supported.
@@ -117,6 +119,10 @@ const colorsTagInput = new TagInput(colors, {
 
 
 ### Custom styles
+
+You can easily adjust `TagInput` styles.
+
+![TagInput in action](./assets/demo-custom-styles.png)
 
 To change colors you can simply update following CSS custom variables:
 
