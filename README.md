@@ -11,7 +11,7 @@ Simple and accessible component for creating tags. Check out a [demo page](https
 
 * Tags can be added both manually and dynamically.
 * Fully accessible for keyboard and assistive technologies.
-* Cusomisable styles.
+* Customizable styles.
 
 ![TagInput in action](./assets/demo-simple.gif)
 
