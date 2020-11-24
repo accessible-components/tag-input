@@ -321,7 +321,7 @@
     switch (e.keyCode) {
       case key.TAB:
       case key.ENTER:
-        if (e.target.value && this._selected) {
+        if (e.target.value || this._selected) {
           e.preventDefault();
         }
         break;
