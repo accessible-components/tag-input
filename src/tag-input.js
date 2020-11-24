@@ -155,7 +155,7 @@
       const removeTag = this.removeTag.bind(this);
       const talk = say.bind(this);
 
-      removeBtn.classList.add(`${settings.prefix}__remove`);
+      removeBtn.classList.add(`${settings.prefix}__remove-button`);
       removeBtn.setAttribute('tabindex', -1);
       removeBtn.setAttribute('type', 'button');
       removeBtn.setAttribute('aria-label', settings.ariaDeleteTag.replace('{{TAG}}', tag));

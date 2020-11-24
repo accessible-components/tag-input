@@ -117,7 +117,6 @@ const colorsTagInput = new TagInput(colors, {
 });
 ```
 
-
 ### Custom styles
 
 You can easily adjust `TagInput` styles.
@@ -128,6 +127,7 @@ To change colors you can simply update following CSS custom variables:
 
 ```css
 .tag-input {
+  /* input */
   --text: inherit;
   --bg: #fff;
   --bg-disabled: #f9f9f9;
@@ -136,22 +136,18 @@ To change colors you can simply update following CSS custom variables:
   --border-focus: rgba(45, 146, 255, 0.7);
   --border-focus-light: rgba(190, 221, 255, 0.5);
 
-  --tag-bg: #e5f1ff;
-  --tag-bg-hover: #d1e6ff;
-  --tag-bg-focus: #2e91fd;
-  --tag-bg-disabled: #e4e4e4;
+  /* tag */
   --tag-text: #164172;
-  --tag-text-focus: #fff;
-  --tag-editable-border: #76aefa;
-  --tag-editable-bg: #fff;
+  --tag-bg: #e5f1ff;
+  --tag-border: #e5f1ff;
+  --tag-remove-button: transparent;
+  --tag-remove-icon: #2e91fd;
 
-  --remove-button-hover: #b3d6ff;
-  --remove-button-editable-hover: #fff;
-  --remove-icon: #2e91fd;
-  --remove-icon-focus: #fff;
-  --remove-icon-focus-hover: #2e91fd;
+  ...
 }
 ```
+
+> See all CSS properties in `tag-input.css`.
 
 To update other styles (`paddings`, `margins` etc.), you may simply override css styles. `TagInput` has following HTML structure:
 
