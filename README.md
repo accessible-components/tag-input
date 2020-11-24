@@ -1,9 +1,18 @@
-# Tag Input
+<h1 align="center"><img src="./assets/banner.svg" alt="Tag Input" width="260"></h1>
 
-[![npm version](https://img.shields.io/npm/v/@accessible-components/tag-input)](https://www.npmjs.com/package/@accessible-components/tag-input)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/accessible-components/tag-input/blob/master/LICENSE.md)
-[![License](https://img.shields.io/badge/accessibility-AA-limegreen)](https://www.w3.org/WAI/WCAG21/quickref/)
+<p align="center">
+  <a href="https://www.npmjs.com/package/@accessible-components/tag-input">
+    <img src="https://img.shields.io/npm/v/@accessible-components/tag-input" alt="npm version">
+  </a>
+  <a href="https://github.com/accessible-components/tag-input/blob/master/LICENSE.md">
+    <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
+  </a>
+  <a href="https://www.w3.org/WAI/WCAG21/quickref/">
+    <img src="https://img.shields.io/badge/accessibility-AA-limegreen" alt="accessibility status">
+  </a>
+</p>
 
+<br />
 
 Simple and accessible component for creating tags. Check out a [demo page](https://tag-input.netlify.app/).
 
