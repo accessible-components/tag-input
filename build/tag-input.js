@@ -1,7 +1,7 @@
 
 /**
  * @accessible-components/tag-input - Simple and accessible component for creating tags.
- * @version v0.1.1
+ * @version v0.2.0
  * @link https://github.com/accessible-components/tag-input
  * @copyright 2020 Sergei Kriger, https://sergeikriger.com/
  * @license MIT
@@ -163,7 +163,7 @@ function _typeof(obj) {"@babel/helpers - typeof";if (typeof Symbol === "function
       var removeTag = this.removeTag.bind(this);
       var talk = say.bind(this);
 
-      removeBtn.classList.add("".concat(settings.prefix, "__remove"));
+      removeBtn.classList.add("".concat(settings.prefix, "__remove-button"));
       removeBtn.setAttribute('tabindex', -1);
       removeBtn.setAttribute('type', 'button');
       removeBtn.setAttribute('aria-label', settings.ariaDeleteTag.replace('{{TAG}}', tag));
@@ -316,6 +316,10 @@ function _typeof(obj) {"@babel/helpers - typeof";if (typeof Symbol === "function
     this.settings.tags.forEach(function (tag) {
       _this2.addTag(tag, true);
     });
+
+    if (this.settings.onInit) {
+      this.settings.onInit(this.tags);
+    }
   }
 
   /**
@@ -329,7 +333,7 @@ function _typeof(obj) {"@babel/helpers - typeof";if (typeof Symbol === "function
     switch (e.keyCode) {
       case key.TAB:
       case key.ENTER:
-        if (e.target.value && this._selected) {
+        if (e.target.value || this._selected) {
           e.preventDefault();
         }
         break;
