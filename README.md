@@ -185,7 +185,7 @@ To update other styles (`paddings`, `margins` etc.), you may simply override css
 </div>
 ```
 
-## Oprions
+## Options
 
 | Option | Type | Default | Description |
 | ------ | ---- | ------- | ----------- |
@@ -196,6 +196,7 @@ To update other styles (`paddings`, `margins` etc.), you may simply override css
 | **placeholder** | `String` | `Add tags` | `placeholder` attribute for the input element. |
 | **label** | `String` | `Tags` | Label text. |
 | **hiddenLabel** | `Boolean` | `false` | Hides the label visually, but keeps it accessible for screen readers. |
+| **onInit** | `Function` | `undefined` | Runs after tag input init. Parameters: `tags` (list of tags). |
 | **onTagAdd** | `Function` | `undefined` | Runs after a new tag was added. Parameters: `tag` (added tag), `tags` (list of tags after adding). |
 | **onTagUpdate** | `Function` | `undefined` | Runs after a tag was updated. Parameters: `oldTag` (a tag before update), `newTag` (a tag after update), `tags` (list of tags after updating). |
 | **onTagRemove** | `Function` | `undefined` | Runs after a tag was removed. Parameters: `tag` (removed tag), `tags` (list of tags after removing). |

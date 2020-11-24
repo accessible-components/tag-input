@@ -308,6 +308,10 @@
     this.settings.tags.forEach((tag) => {
       this.addTag(tag, true);
     });
+
+    if (this.settings.onInit) {
+      this.settings.onInit(this.tags);
+    }
   }
 
   /**
