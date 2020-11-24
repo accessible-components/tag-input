@@ -50,7 +50,7 @@ h3 {
   font-size: inherit;
   font-family: inherit;
   color: #fff;
-  background-color: #2e91fd;
+  background-color: #2370c3;
   border: none;
   padding: 12px 16px;
   border-radius: 4px;
@@ -61,7 +61,7 @@ h3 {
 .button:hover,
 .button:focus {
   outline: none;
-  background-color: #2272ca;
+  background-color: #1c508a;
 }
 
 footer {
@@ -84,6 +84,10 @@ footer {
 
 .custom h2 {
   font-family: monospace;
+}
+
+.custom .tag-input-container {
+  color: #fff;
 }
 
 .custom .tag-input {
